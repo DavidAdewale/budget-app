@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
+    <script type="module" defer src="/js/controller.js"></script>
 
     <title>Budgeting App</title>
   </head>
@@ -13,7 +13,34 @@
       <div class="left-content">
         <div class="form">
           <h3>Enter your income/expense details:</h3>
-          <button class="btn btn-submit">Submit</button>
+          <form id="budgetForm">
+            <fieldset>
+              <div>
+                <label htmlFor="date">Date</label>
+                <input id="date" type="date" />
+              </div>
+
+              <div>
+                <label htmlFor="amount">Amount</label>
+                <input id="amount" type="number" />
+              </div>
+            </fieldset>
+            <fieldset>
+              <div>
+                <label>Category</label>
+
+                <select>
+                  <option value="income">Income</option>
+                  <option value="expense">Expense</option>
+                </select>
+              </div>
+              <div>
+                <label htmlFor="purpose">Purpose</label>
+                <input id="purpose" type="text" />
+              </div>
+            </fieldset>
+          </form>
+          <button class="btn btn-submit" form="budgetForm">Submit</button>
         </div>
         <div class="summary">Summary</div>
       </div>
@@ -29,5 +56,6 @@
       </div>
     </main>
     <footer>&copy;<span id="year"></span> Group 13 | CWW Tech Africa</footer>
+    <script src="script.js"></script>
   </body>
 </html>
