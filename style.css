@@ -57,7 +57,6 @@ h6 {
 }
 
 footer {
-  border-top: 1px solid var(--color-light-gray);
   text-align: center;
   padding: 1rem 0;
 }
@@ -115,9 +114,12 @@ footer {
 
 .history {
   width: 100%;
-  margin-bottom: 1rem;
+  padding: 0 0 3rem 0;
+  margin-bottom: 3rem;
+}
 
-  border-bottom: 1px solid var(--color-light-gray);
+.history__title {
+  padding-bottom: 2rem;
 }
 
 .btn {
@@ -172,6 +174,47 @@ footer {
   gap: 3rem;
 }
 
+#history_box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.history__error {
+  text-align: center;
+}
+
+.history__error p {
+  color: var(--color-danger-text);
+}
+
+.history__item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  justify-items: end;
+}
+
+.date {
+  justify-self: start;
+}
+
+.category {
+  justify-self: start;
+}
+
+/* .purpose {
+  justify-self: center;
+} */
+
+.income {
+  color: var(--color-green);
+}
+
+.expense {
+  color: var(--color-orange);
+}
+
 fieldset {
   border: none;
   display: flex;
@@ -215,5 +258,9 @@ input[type='date'] {
   .form form {
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .history__item {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

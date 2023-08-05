@@ -1,20 +1,27 @@
 import View from './view';
 
-class FormView extends View {
+class FormView {
   _parentElement = document.querySelector('.form');
+  date = document.querySelector('#date');
+  amount = document.querySelector('#amount');
+  category = document.querySelector('#category');
+  purpose = document.querySelector('#purpose');
 
-  constructor() {
-    super();
+  _reset() {
+    this.date.value = '';
+    this.amount.value = '';
+    this.category.value = '';
+    this.purpose.value = '';
   }
 
-  addFormEventHandler(action) {
-    this._parentElement.addEventListener('submit', function (e) {
-      e.preventDefault();
+  addFormEventHandler(action, renderSummary) {
+    this._parentElement.addEventListener('submit', (e) => {
+      // e.preventDefault();
 
-      const date = document.querySelector('#date').value;
-      const amount = document.querySelector('#amount').value;
-      const category = document.querySelector('#category').value;
-      const purpose = document.querySelector('#purpose').value;
+      const date = this.date.value;
+      const amount = this.amount.value;
+      const category = this.category.value;
+      const purpose = this.purpose.value;
 
       if (!date || !amount || !category || !purpose) return;
 
@@ -27,6 +34,8 @@ class FormView extends View {
       };
 
       action(submission);
+      renderSummary();
+      this._reset();
     });
   }
 }
