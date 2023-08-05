@@ -10,4 +10,4 @@ A simple budget app - A group project assigned by CWW Africa. Group Members incl
 6- Valerie Okonkwo
 
 Tools Used:
-HTML, CSS, and JavaScript
+HTML, CSS, and JavaScript....
