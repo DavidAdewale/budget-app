@@ -12,8 +12,9 @@ function persistHistory() {
 }
 
 export function recordHistory(data) {
-  state.history.push(data);
-  persistHistory();
+  //   state.history.push(data);
+  //   persistHistory();
+  console.log(data);
 }
 
 function init() {
