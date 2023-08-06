@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "description": "Budget Tracker",
   "default": "index.html",
+  "homepage": "https://davidadewale.github.io/budget-app",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist"
+    "build": "parcel build index.html --dist-dir ./dist",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "David Adewale",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.9.0",
+    "gh-pages": "^5.0.0",
     "parcel": "^2.9.0",
     "process": "^0.11.10"
   },

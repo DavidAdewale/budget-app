@@ -42,7 +42,6 @@ class HistoryView {
 
   loadHistoryOnDOMLoad(stateArray) {
     const state = stateArray();
-    console.log(state);
     document.addEventListener('DOMContentLoaded', () => {
       if (state.length === 0) return this._errorMessage();
       state.forEach((markup) =>
