@@ -1,5 +1,8 @@
-import { capitalizeFirstLetter, formatCurrency } from '../utilities/helpers';
-import View from './view';
+import {
+  capitalizeFirstLetter,
+  formatCurrency,
+  formatDateDistance,
+} from '../utilities/helpers';
 
 class HistoryView {
   _parentElement = document.querySelector('#history_box');
@@ -9,10 +12,10 @@ class HistoryView {
     const { id, date, amount, category, purpose } = data;
 
     return `<div class="history__item" data-id=${id}>
-        <p class="date">${date}</p>
-        <p class=${
+        <p class="date">${formatDateDistance(date)}</p>
+        <p class='${
           category === 'income' ? 'income' : 'expense'
-        }>${formatCurrency(amount)}</p>
+        } amount' >${formatCurrency(amount)}</p>
         <p class="category">${capitalizeFirstLetter(category)}</p>
         <p class="purpose">${capitalizeFirstLetter(purpose)}</p>
       </div>`;

@@ -18,8 +18,6 @@ export function recordHistory(data) {
   state.summary.netIncome = state.summary.income - state.summary.expenses;
   persistHistory();
   persistSummary();
-  //   console.log(state.summary);
-  //   console.log(data);
 }
 
 function calculateSummary() {

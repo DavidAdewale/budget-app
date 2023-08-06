@@ -1,5 +1,3 @@
-import View from './view';
-
 class FormView {
   _parentElement = document.querySelector('.form');
   date = document.querySelector('#date');

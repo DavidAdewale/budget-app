@@ -30,8 +30,6 @@ function init() {
   formView.addFormEventHandler(recordFormData, renderSummary, historyData);
   historyView.clearRecords(clearHistoryData, clearSummary);
   summaryView.summaryDOMContentLoad(model.updateSummary);
-
-  // historyData();
 }
 
 init();
