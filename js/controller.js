@@ -13,21 +13,25 @@ function renderSummary() {
 
 function historyData() {
   const data = model.historyData();
-  //   console.log(data);
-
   historyView.renderHistory(data);
 }
 
 function clearHistoryData() {
   model.clearHistory();
-  //   location.reload();
+}
+
+function clearSummary() {
+  model.clearSummary();
+  summaryView.clearSummary();
 }
 
 function init() {
-  formView.addFormEventHandler(recordFormData, renderSummary);
-  historyView.clearRecords(clearHistoryData);
+  historyView.loadHistoryOnDOMLoad(model.historyData);
+  formView.addFormEventHandler(recordFormData, renderSummary, historyData);
+  historyView.clearRecords(clearHistoryData, clearSummary);
+  summaryView.summaryDOMContentLoad(model.updateSummary);
 
-  historyData();
+  // historyData();
 }
 
 init();

@@ -1,7 +1,7 @@
 import { capitalizeFirstLetter, formatCurrency } from '../utilities/helpers';
 import View from './view';
 
-class HistoryView extends View {
+class HistoryView {
   _parentElement = document.querySelector('#history_box');
   resetHistory = document.querySelector('.btn-reset');
 
@@ -27,16 +27,44 @@ class HistoryView extends View {
   }
 
   renderHistory(markupArray) {
-    if (markupArray.length === 0) return this._errorMessage();
+    const errorElement = this._parentElement.querySelector('.history__error');
+    if (errorElement) {
+      this._parentElement.removeChild(errorElement);
+    }
 
-    markupArray.map((markup) => {
-      const data = this._markup(markup);
-      this._parentElement.insertAdjacentHTML('afterbegin', data);
+    const newData = markupArray[markupArray.length - 1];
+    this._parentElement.insertAdjacentHTML('afterbegin', this._markup(newData));
+    this.resetHistory.classList.remove('hidden');
+  }
+
+  loadHistoryOnDOMLoad(stateArray) {
+    const state = stateArray();
+    console.log(state);
+    document.addEventListener('DOMContentLoaded', () => {
+      if (state.length === 0) return this._errorMessage();
+      state.forEach((markup) =>
+        this._parentElement.insertAdjacentHTML(
+          'afterbegin',
+          this._markup(markup)
+        )
+      );
+      this.resetHistory.classList.remove('hidden');
     });
   }
 
-  clearRecords(action) {
-    this.resetHistory.addEventListener('click', action);
+  clearRecords(action, action2) {
+    this.resetHistory.addEventListener('click', () => {
+      action();
+      action2();
+
+      const errorMessageElement =
+        this._parentElement.querySelector('.history__error');
+      if (!errorMessageElement) {
+        this.resetHistory.classList.add('hidden');
+        this._parentElement.innerHTML = '';
+        this._parentElement.innerHTML = this._errorMessage().bind(this);
+      }
+    });
   }
 }
 

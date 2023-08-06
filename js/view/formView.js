@@ -14,9 +14,9 @@ class FormView {
     this.purpose.value = '';
   }
 
-  addFormEventHandler(action, renderSummary) {
+  addFormEventHandler(action, renderSummary, renderHistory) {
     this._parentElement.addEventListener('submit', (e) => {
-      // e.preventDefault();
+      e.preventDefault();
 
       const date = this.date.value;
       const amount = this.amount.value;
@@ -34,6 +34,7 @@ class FormView {
       };
 
       action(submission);
+      renderHistory();
       renderSummary();
       this._reset();
     });

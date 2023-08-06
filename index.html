@@ -43,18 +43,17 @@
           <button class="btn btn-submit" form="budgetForm">Submit</button>
         </div>
         <div class="summary">
-          Summary
           <div>
-            <div>
+            <div class="summaryGrid">
               <h3>Total Income</h3>
-              <p id="total-income"></p>
+              <p class="income" id="total-income"></p>
             </div>
-            <div>
+            <div class="summaryGrid totalExpenses">
               <h3>Total Expense</h3>
-              <p id="total-expenses"></p>
+              <p class="expense" id="total-expenses"></p>
             </div>
           </div>
-          <div>
+          <div class="summaryGrid">
             <h3>Total Net Income</h3>
             <p id="total-netIncome"></p>
           </div>
@@ -71,7 +70,7 @@
 
           <div id="history_box"></div>
         </div>
-        <button class="btn btn-reset">Reset</button>
+        <button class="btn btn-reset hidden">Reset</button>
       </div>
     </main>
     <footer>&copy;<span id="year"></span> Group 13 | CWW Tech Africa</footer>

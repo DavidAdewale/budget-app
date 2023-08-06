@@ -51,14 +51,22 @@ export function historyData() {
 }
 
 export function clearHistory() {
-  //   console.log('cleared');
+  state.history = [];
+  persistHistory();
   localStorage.removeItem('history');
+}
+
+export function clearSummary() {
+  state.summary.income = 0;
+  state.summary.expenses = 0;
+  state.summary.netIncome = 0;
+  persistSummary();
   localStorage.removeItem('summary');
 }
 
 function init() {
   const storage = localStorage.getItem('history');
-  const summary = localStorage.getItem('histoy');
+  const summary = localStorage.getItem('summary');
   if (storage) state.history = JSON.parse(storage);
   if (summary) state.summary = JSON.parse(summary);
 }
