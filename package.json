@@ -1,26 +1,17 @@
 {
-  "name": "budget-tracking",
-  "version": "1.0.0",
-  "description": "Budget Tracker",
-  "default": "index.html",
-  "homepage": "https://davidadewale.github.io/budget-app",
+  "name": "budget-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html --dist-dir ./dist",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "author": "David Adewale",
-  "license": "ISC",
   "devDependencies": {
-    "gh-pages": "^5.0.0",
-    "parcel": "^2.9.0",
-    "process": "^0.11.10"
+    "vite": "^4.4.5"
   },
   "dependencies": {
-    "core-js": "^3.30.2",
-    "date-fns": "^2.30.0",
-    "fractional": "^1.0.0",
-    "regenerator-runtime": "^0.13.11"
+    "date-fns": "^2.30.0"
   }
 }
