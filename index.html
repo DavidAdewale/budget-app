@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" defer src="/js/controller.js"></script>
+
+    <title>Budgeting App</title>
+  </head>
+  <body>
+    <main class="app-content">
+      <div class="left-content">
+        <div class="form">
+          <h3>Enter your income/expense details:</h3>
+          <form id="budgetForm">
+            <fieldset>
+              <div>
+                <label htmlFor="date">Date</label>
+                <input id="date" type="date" name="date" max="yyyy-MM-dd" />
+              </div>
+
+              <div>
+                <label htmlFor="amount">Amount</label>
+                <input id="amount" type="number" />
+              </div>
+            </fieldset>
+            <fieldset>
+              <div>
+                <label>Category</label>
+
+                <select id="category">
+                  <option value="income">Income</option>
+                  <option value="expense">Expense</option>
+                </select>
+              </div>
+              <div>
+                <label htmlFor="purpose">Purpose</label>
+                <input id="purpose" type="text" />
+              </div>
+            </fieldset>
+          </form>
+          <button class="btn btn-submit" form="budgetForm">Submit</button>
+        </div>
+        <div class="summary">
+          <div>
+            <div class="summaryGrid">
+              <h3>Total Income</h3>
+              <p class="income" id="total-income"></p>
+            </div>
+            <div class="summaryGrid totalExpenses">
+              <h3>Total Expense</h3>
+              <p class="expense" id="total-expenses"></p>
+            </div>
+          </div>
+          <div class="summaryGrid">
+            <h3>Total Net Income</h3>
+            <p id="total-netIncome"></p>
+          </div>
+        </div>
+      </div>
+      <div class="right-content">
+        <div class="history">
+          <div class="alert hidden">
+            ⛔
+            <p>You expenses have exceeded your income!</p>
+          </div>
+
+          <h3 class="history__title">History</h3>
+
+          <div id="history_box"></div>
+        </div>
+        <button class="btn btn-reset hidden">Reset</button>
+      </div>
+    </main>
+    <footer>&copy;<span id="year"></span> Group 13 | CWW Tech Africa</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
