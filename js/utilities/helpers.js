@@ -1,4 +1,4 @@
-import { isToday, format, formatDistanceToNow } from 'date-fns';
+import { isToday, formatDistanceToNow } from 'date-fns';
 
 export const formatCurrency = (value) =>
   new Intl.NumberFormat('en', { style: 'currency', currency: 'NGN' }).format(
