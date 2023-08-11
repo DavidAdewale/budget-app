@@ -31,7 +31,10 @@ class FormView {
       const category = this.category.value;
       const purpose = this.purpose.value;
 
-      if (!date || !amount || !category || !purpose) return;
+      if (!date || !amount || !category || !purpose) {
+        alert('Oops! Incomplete Entry. Please fill out the form');
+        return;
+      }
 
       const submission = {
         id: new Date(date).toISOString() + Math.random(),
