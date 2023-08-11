@@ -2,6 +2,9 @@
 
 A simple budget app - a group project assigned by CWW Africa.
 
+\*\*Preview the app:
+Preview this app on your device by visiting this url - https://cww-budgetapp.netlify.app/
+
 ## Tools Used:
 
 HTML, CSS, and JavaScript

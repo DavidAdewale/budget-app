@@ -4,6 +4,16 @@ class FormView {
   amount = document.querySelector('#amount');
   category = document.querySelector('#category');
   purpose = document.querySelector('#purpose');
+  dateInput = document.getElementById('date');
+
+  constructor() {
+    this._setMaxDate();
+  }
+
+  _setMaxDate() {
+    const currentDate = new Date().toISOString().split('T')[0];
+    this.dateInput.setAttribute('max', currentDate);
+  }
 
   _reset() {
     this.date.value = '';

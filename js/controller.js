@@ -2,6 +2,7 @@ import * as model from './model';
 import formView from './view/formView';
 import historyView from './view/historyView';
 import summaryView from './view/summaryView';
+import footerView from './view/footerView';
 
 function recordFormData(submission) {
   return model.recordHistory(submission);
