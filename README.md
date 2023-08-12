@@ -63,7 +63,7 @@ This project uses ES6 Modules, Object-Oriented Programming with ES6 Classes, and
 
    - Ensured seamless collaboration via git version control.
 
-3. **Chukwuemeka Chinweuche** : ID: 33622
+3. **Chukwuemeka Chinweuche** : ID: 33285
 
    - Coded the static HTML for the history section.
 
