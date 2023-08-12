@@ -1,6 +1,6 @@
-# BUDGETING APP
+# PERSONAL BUDGET TRACKER
 
-A simple budget app - a group project assigned by CWW Africa.
+Personal Budget Tracker - a group project assigned by CWW Africa.
 
 \*\*Preview the app:
 Preview this app on your device by visiting this url - https://cww-budgetapp.netlify.app/
@@ -51,7 +51,7 @@ This project uses ES6 Modules, Object-Oriented Programming with ES6 Classes, and
 
 ## Project Contributions
 
-1. **David Adewale (Group Leader)**
+1. **David Adewale (Group Leader)** : ID: 33622
 
    - Designed the project and decided on the features.
    - Organized the project structure and architecture.
@@ -59,23 +59,23 @@ This project uses ES6 Modules, Object-Oriented Programming with ES6 Classes, and
    - Coded the entire MVC architecture in JavaScript.
    - Deployed the project.
 
-2. **Emmy**
+2. **Emmanuel Muofunanya** : ID: 33610
 
    - Ensured seamless collaboration via git version control.
 
-3. **Promzy**
+3. **Chukwuemeka Chinweuche** : ID: 33622
 
    - Coded the static HTML for the history section.
 
-4. **Funmilayo Dada**
+4. **Funmilayo Dada** : ID: 33539
 
    - Coded the static HTML for the forms.
 
-5. **Adebowale Weade**
+5. **Adebowale Weade** : ID: 33505
 
    - Handled media queries for responsive design.
 
-6. **Valerie Okonkwo**
+6. **Valerie Okonkwo** : ID: 33830
    - Coded the static HTML and contributed to CSS styling.
 
 We worked collaboratively to bring this budgeting app to life!
